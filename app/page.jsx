@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Chart } from "react-google-charts";
 import styles from './page.module.css'
+import Comentarios from "@/components/Comentarios";
 
 export default function Home() {
   const [produtos, setProdutos] = useState([])
@@ -48,41 +49,56 @@ export default function Home() {
   })
 
   return (
-   
-    <div className="container" >
-      <h2 className="mt-4 mb-4">Visão Geral do Sistema</h2>
+   <>
+   <section className={styles.page}>
+    <div className={styles.box}>
+      <div className="container">
+        <h2 className="mt-4 mb-4">Visão Geral do Sistema</h2>
 
-      <span className="btn btn-outline-secondary btn-md">
-        <p className="badge bg-dark">{geral.clientes}</p>
-        <p>Nº de Clientes Cadastrados</p>
-      </span>
-      <span className="btn btn-outline-secondary btn-md mx-2">
-        <p className="badge bg-dark">{geral.roupas}</p>
-        <p>Nº de Produtos Cadastrados</p>
-      </span>
-      <span className="btn btn-outline-secondary btn-md me-2">
-        <p className="badge bg-dark">
-          R$ {geral.media && Number(geral.media.preco).toLocaleString("pt-br", {minimumFractionDigits: 2})}
-        </p>
-        <p>Preço Médio dos Produtos</p>
-      </span>
-      <span className="btn btn-outline-secondary btn-md">
-        <p className="badge bg-dark">{geral.avaliacoes}</p>
-        <p>Nº Total de Avaliações</p>
-      </span>
-      <span className="btn btn-outline-secondary btn-md">
-        <p className="badge bg-dark">{geral.avaliacoes_dia}</p>
-        <p>Nº de Avaliações do Dia</p>
-      </span>
-      <Chart
+        <span className="btn btn-outline-secondary btn-md">
+          <p className="badge bg-dark">{geral.clientes}</p>
+          <p>Nº de Clientes Cadastrados</p>
+        </span>
+        <span className="btn btn-outline-secondary btn-md mx-2">
+          <p className="badge bg-dark">{geral.roupas}</p>
+          <p>Nº de Produtos Cadastrados</p>
+        </span>
+        <span className="btn btn-outline-secondary btn-md me-2">
+          <p className="badge bg-dark">
+            R$ {geral.media && Number(geral.media.preco).toLocaleString("pt-br", { minimumFractionDigits: 2 })}
+          </p>
+          <p>Preço Médio dos Produtos</p>
+        </span>
+        <span className="btn btn-outline-secondary btn-md me-2">
+          <p className="badge bg-dark">{geral.avaliacoes}</p>
+          <p>Nº Total de Avaliações</p>
+        </span>
+        <span className="btn btn-outline-secondary btn-md">
+          <p className="badge bg-dark">{geral.avaliacoes_dia}</p>
+          <p>Nº de Avaliações do Dia</p>
+        </span>
+      </div>
+    </div>
+    
+    <div className={styles.second}>
+     <div className={styles.box2}>
+     <Chart
         chartType="Bar"
-        width="100%"
-        height="400px"
+        width={700}
+        height="450px"
         data={dados}
         options={{colors: ['#343a40', '#6c757d']}}
       />
+      </div>
 
-    </div>
+      <div className={styles.box3}>
+        <Comentarios/>
+      </div>
+      </div>
+      </section>
+      </>
+
+  
    
   )
 }

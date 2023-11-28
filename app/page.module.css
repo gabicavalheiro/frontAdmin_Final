@@ -1,3 +1,40 @@
-.container{
-    width: 200px;
+.page{
+    margin: 70px;
+    display: flex;
+    flex-direction: column;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    background-color: white;
+    border-radius: 15px;
+    padding-bottom: 20px;
+
+}
+
+.second{
+    display: flex;
+    flex-direction: row;
+}
+.box2{
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px;
+    background-color: white;
+    border-radius: 15px;
+    width: 750px;
+    padding-left: 10px;
+    height: 500px;
+    padding-top: 20px;
+}
+
+.box3{
+    margin: 20px;
+    background-color: white;
+    border-radius: 15px;
+    width: 570px;
+    padding-left: 10px;
+    height: 500px;
+    padding-top: 20px;
 }

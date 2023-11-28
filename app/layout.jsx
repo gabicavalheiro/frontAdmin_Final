@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import Titulo from '@/components/Titulo'
+import styles from './layout.module.css'
 
 export const metadata = {
   title: 'Controle de Filmes',
@@ -13,8 +14,10 @@ export default function RootLayout({ children }) {
       <link rel="shortcut icon" href="../cinema.png" type="image/x-icon" />  
     </head>    
       <body>
+        <section className={styles.section}>
         <Titulo />
         {children}
+        </section>
       </body>
     </html>
   )

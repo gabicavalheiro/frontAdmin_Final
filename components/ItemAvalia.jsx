@@ -34,10 +34,10 @@ export default function ItemAvalia(props) {
   return (
     <tr>
       <td>
-        <img src={props.avalia.filme.capa} alt={`Capa de ${props.avalia.filme.titulo}`} width={60} />        
+        <img src={props.avalia.roupa.foto} alt={`Capa de ${props.avalia.roupa.nome}`} width={60} />        
       </td>
-      <td>{props.avalia.filme.titulo}</td>
-      <td><Estrelas soma={props.avalia.filme.soma} num={props.avalia.filme.num} /></td>
+      <td>{props.avalia.roupa.nome}</td>
+      <td><Estrelas soma={props.avalia.roupa.soma} num={props.avalia.roupa.num} /></td>
       <td>{props.avalia.cliente.nome}</td>
       <td>{AjustaData(props.avalia.data)}</td>
       <td>{props.avalia.estrelas} estrelas</td>

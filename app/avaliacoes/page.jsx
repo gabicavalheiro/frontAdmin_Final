@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react"
 import ItemAvalia from "@/components/ItemAvalia"
 import { useRouter } from "next/navigation"
+import styles from './page.module.css'
 
 export default function Avaliacoes() {
   const [avaliacoes, setAvaliacoes] = useState([])
@@ -45,8 +46,7 @@ export default function Avaliacoes() {
 
   return (
     <div className="container">
-      <h2 className="mt-2">Listagem de Avaliações</h2>
-
+      <h2 className="mt-4 mb-4">Listagem de Avaliações</h2>
       <table className="table table-striped">
         <thead>
           <tr>
@@ -65,5 +65,6 @@ export default function Avaliacoes() {
         </tbody>
       </table>
     </div>
+  
   )
 }
