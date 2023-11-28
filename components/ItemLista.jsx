@@ -30,12 +30,12 @@ export default function ItemLista(props) {
   return (
     <tr>
       <td>
-        <img src={props.filme.capa} alt={`Capa de ${props.filme.titulo}`} width={80} />        
+        <img src={props.filme.foto} alt={`Capa de ${props.filme.nome}`} width={80} />        
       </td>
-      <td className={props.filme.destaque ? "fw-bold" : ""}>{props.filme.titulo}</td>
-      <td className={props.filme.destaque ? "fw-bold" : ""}>{props.filme.genero}</td>
-      <td className={props.filme.destaque ? "fw-bold" : ""}>{props.filme.duracao}</td>
-      <td className={props.filme.destaque ? "fw-bold" : ""}>{props.filme.classif}</td>
+      <td className={props.filme.destaque ? "fw-bold" : ""}>{props.filme.nome}</td>
+      <td className={props.filme.destaque ? "fw-bold" : ""}>{props.filme.preco}</td>
+      <td className={props.filme.destaque ? "fw-bold" : ""}>{props.filme.cor}</td>
+      <td className={props.filme.destaque ? "fw-bold" : ""}>{props.filme.soma}</td>
       <td>
         <i className="bi bi-x-circle text-danger" style={{fontSize: 24, cursor: 'pointer'}}
            onClick={() => confirmaExclusao(props.filme.id, props.filme.titulo)}

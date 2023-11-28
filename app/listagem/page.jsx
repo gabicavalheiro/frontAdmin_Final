@@ -87,7 +87,7 @@ export default function Listagem() {
   if (isLoading) {
     return (
       <div className="container">
-        <h2>Listagem de Filmes</h2>
+        <h2>Listagem de Produtos</h2>
         <h5>Aguarde... Carregando os dados</h5>
       </div>
     )
@@ -97,7 +97,7 @@ export default function Listagem() {
     <div className="container">
       <div className="row mt-2">
         <div className="col-sm-7">
-          <h2 className="mt-2">Listagem de Filmes</h2>
+          <h2 className="mt-2">Listagem de Produtos</h2>
         </div>
         <div className="col-sm-5 d-flex">
           <Pesquisa filtra={filtraDados} mostra={mostraTodos} />
@@ -112,10 +112,10 @@ export default function Listagem() {
         <thead>
           <tr>
             <th>Foto</th>
-            <th>Título do Filme</th>
-            <th>Gênero</th>
-            <th>Duração</th>
-            <th>Classif.</th>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Cor</th>
+            <th>Avaliações</th>
             <th>Ações</th>
           </tr>
         </thead>
