@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import { Chart } from "react-google-charts";
 import styles from './page.module.css'
-import Comentarios from "@/components/Comentarios";
 
 export default function Home() {
   const [produtos, setProdutos] = useState([])
@@ -92,7 +91,7 @@ export default function Home() {
       </div>
 
       <div className={styles.box3}>
-        <Comentarios/>
+        
       </div>
       </div>
       </section>
