@@ -1,3 +1,5 @@
+
+
 .page{
     margin: 70px;
     display: flex;
@@ -37,4 +39,10 @@
     padding-left: 10px;
     height: 500px;
     padding-top: 20px;
+}
+
+.coments{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }

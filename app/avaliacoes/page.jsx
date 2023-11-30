@@ -51,8 +51,8 @@ export default function Avaliacoes() {
         <thead>
           <tr>
             <th>Capa</th>
-            <th>Título do Filme</th>
-            <th>Média</th>
+            <th>Produto</th>
+            <th>Avaliação</th>
             <th>Nome do Cliente</th>
             <th>Data</th>
             <th>Avaliação</th>
